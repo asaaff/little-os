@@ -1,24 +1,25 @@
 ENTRY(loader)
 
+
 SECTIONS {
     . = 0x00100000;
 
-    .text ALIGN (0x1000) : 
+    .text : 
     {
         *(.text)
     } 
 
-    .rodata ALIGN (0x1000) : /* align at 4 KB */ 
+    .rodata :
     {
         *(.rodata*) /* all read-only data sections from all files */
     } 
     
-    .data ALIGN (0x1000) : /* align at 4 KB */ 
+    .data :
     {
         *(.data) /* all data sections from all files */
     } 
     
-    .bss ALIGN (0x1000) : /* align at 4 KB */
+    .bss :
     {
         *(COMMON) /* all COMMON sections from all files */
         *(.bss) /* all bss sections from all files */ 

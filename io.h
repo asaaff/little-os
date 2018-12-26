@@ -18,10 +18,6 @@
 #define FB_LIGHT_BROWN      14
 #define FB_WHITE            15
 
-/* just a simple write, no scroll, no cursor positioning */
-int write(char *buf, unsigned int len);
-
-void fb_move_cursor(unsigned short pos);
-void fb_write_cell(unsigned int i, char c, unsigned char fg, unsigned char bg);
+void printf (const char *format, ...);
 
 #endif /* INCLUDE_IO_H */
