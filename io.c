@@ -168,3 +168,14 @@ string:
         }
     }
 }
+
+void cls (void)
+{
+    int i;
+
+    for (i = 0; i < COLUMNS * LINES * 2; i++)
+        *(fb + i) = 0;
+
+    xpos = 0;
+    ypos = 0;
+}

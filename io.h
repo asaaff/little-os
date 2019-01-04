@@ -18,6 +18,7 @@
 #define FB_LIGHT_BROWN      14
 #define FB_WHITE            15
 
-void printf (const char *format, ...);
+void printf(const char *format, ...);
+void cls(void);
 
 #endif /* INCLUDE_IO_H */

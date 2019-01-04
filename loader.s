@@ -13,7 +13,11 @@ align 4
 
 
 loader:
+    ; has physical address of multiboot information
+    ; set by bootloader
     push ebx
+    ; set by gnu multiboot, eax must contain 0x2BADB002
+    push eax
     call kmain
 
 .loop:
